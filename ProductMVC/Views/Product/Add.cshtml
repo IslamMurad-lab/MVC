@@ -1,0 +1,32 @@
+﻿@model ProductMVC.Models.Product
+
+<h1>Add New Product</h1>
+
+<form asp-controller="Product" asp-action="Add" method="post">
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Product Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label">Image URL</label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-success">
+        Add Product
+    </button>
+
+    <a asp-controller="Product"
+       asp-action="GetAll"
+       class="btn btn-secondary">
+        Back To List
+    </a>
+
+</form>

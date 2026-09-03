@@ -1,0 +1,34 @@
+﻿@model ProductMVC.Models.Product
+
+<h1>Update Product</h1>
+
+<form asp-controller="Product" asp-action="Update" method="post">
+
+    <input type="hidden" asp-for="Id" />
+
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label">Product Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Price" class="form-label">Price</label>
+        <input asp-for="Price" class="form-control" />
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ImageUrl" class="form-label">Image URL</label>
+        <input asp-for="ImageUrl" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary">
+        Update Product
+    </button>
+
+    <a asp-controller="Product"
+       asp-action="GetAll"
+       class="btn btn-secondary">
+        Back To List
+    </a>
+
+</form>
